@@ -12,3 +12,24 @@
 <div>
     <img [src]="imageFileName" width="600" height="380" (click)="changeImage()" />
 </div>
+
+<hr>
+<button class="btn" (click)="showHideDivSquare()" [textContent]="btnSquareText"></button>
+<div id="square" *ngIf="divSquareEnabled"></div>
+
+<hr>
+<p>Categorias:</p>
+<div class="inline">
+    <span class="spanItem"  *ngFor="let category of categories" (click)="selectCategory(category)">{{category}}</span>
+</div>
+
+<hr>
+<p>Descrição com Switch</p>
+<div [ngSwitch]="selectedCategory">
+    <p class="spanItem" *ngSwitchCase="'Filme'">Perguntas sobre os principais filmes e atores do cinema.</p>
+    <p class="spanItem" *ngSwitchCase="'Musica'">Perguntas sobre bandas, artistas e letras de musica.</p>
+    <p class="spanItem" *ngSwitchCase="'Geografia'">Perguntas sobre países, bandeiras, cidades e lugares turísticos.</p>
+    <p class="spanItem" *ngSwitchCase="'Jogos Eletrônicos'">Perguntas sobre personagens, história, jogadores e criadores do mundo dos jogos.</p>
+    <p class="spanItem" *ngSwitchCase="'Cultura Geek'">Perguntas sobre séries de tv, animações, quadrinhos e demais artes do mundo geek.</p>
+    <p class="spanItem" *ngSwitchDefault>Selecione uma Categoria</p>
+</div>

@@ -1,0 +1,12 @@
+#square {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(62, 43, 148);
+}
+
+.spanItem {
+    padding: 2px;
+    margin: 5px;
+    border: solid 1px;
+    border-color: blue;
+}

@@ -15,7 +15,9 @@ export class MenuComponent {
   divSquareEnabled:boolean = true;
   btnSquareText:string = 'Esconder';
   categories:string[] = ['Filme', 'Musica', 'Geografia', 'Jogos Eletrônicos', 'Cultura Geek'];
-  selectedCategory:string = ''; 
+  selectedCategory:string = '';
+  colorList:string[] = ['blue', 'red', 'yellow', 'green', 'orange'];
+
 
   showData() {
     alert('id: ' + this.id.toString() + ' nome: ' + this.name);

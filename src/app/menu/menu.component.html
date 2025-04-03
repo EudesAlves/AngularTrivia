@@ -33,3 +33,9 @@
     <p class="spanItem" *ngSwitchCase="'Cultura Geek'">Perguntas sobre séries de tv, animações, quadrinhos e demais artes do mundo geek.</p>
     <p class="spanItem" *ngSwitchDefault>Selecione uma Categoria</p>
 </div>
+
+<hr>
+<h4 [ngStyle]="{'color': 'blue'}">Ng Style</h4>
+<div class="inline">
+    <span class="spanItem" *ngFor="let color of colorList" [ngStyle]="{'color': color, 'border-color': color}">{{color}}</span>
+</div>

@@ -10,3 +10,18 @@
     border: solid 1px;
     border-color: blue;
 }
+
+.green {
+    padding: 2px;
+    margin: 5px;
+    border: solid 1px;
+    border-color: rgb(9, 122, 24);
+    color: green;
+}
+.blue {
+    padding: 2px;
+    margin: 5px;
+    border: solid 1px;
+    border-color: blue;
+    color: blue;
+}

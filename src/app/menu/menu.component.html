@@ -20,7 +20,7 @@
 <hr>
 <p>Categorias:</p>
 <div class="inline">
-    <span class="spanItem"  *ngFor="let category of categories" (click)="selectCategory(category)">{{category}}</span>
+    <span class="spanItem"  *ngFor="let category of categories; index as index" (click)="selectCategory(category)">{{index}} - {{category}}</span>
 </div>
 
 <hr>
@@ -38,4 +38,10 @@
 <h4 [ngStyle]="{'color': 'blue'}">Ng Style</h4>
 <div class="inline">
     <span class="spanItem" *ngFor="let color of colorList" [ngStyle]="{'color': color, 'border-color': color}">{{color}}</span>
+</div>
+
+<hr>
+<h4>Ng Class</h4>
+<div class="inline">
+    <span [ngClass]="selectedClass == 'green' ? classGreenName : classBlueName" (click)="changeClass()" >{{selectedClass}}</span>
 </div>

@@ -17,8 +17,10 @@ export class MenuComponent {
   categories:string[] = ['Filme', 'Musica', 'Geografia', 'Jogos Eletrônicos', 'Cultura Geek'];
   selectedCategory:string = '';
   colorList:string[] = ['blue', 'red', 'yellow', 'green', 'orange'];
-
-
+  selectedClass:string = 'green';
+  classGreenName:string = 'green';
+  classBlueName:string = 'blue';
+  
   showData() {
     alert('id: ' + this.id.toString() + ' nome: ' + this.name);
   }
@@ -48,4 +50,13 @@ export class MenuComponent {
     this.selectedCategory = category;
   }
 
+  changeClass():void {
+    if(this.selectedClass == this.classGreenName) {
+      this.selectedClass = this.classBlueName;
+    }
+    else {
+      this.selectedClass = this.classGreenName;      
+    }
+
+  }
 }

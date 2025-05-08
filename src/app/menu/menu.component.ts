@@ -20,6 +20,7 @@ export class MenuComponent {
   selectedClass:string = 'green';
   classGreenName:string = 'green';
   classBlueName:string = 'blue';
+  condition:boolean = true;
   
   showData() {
     alert('id: ' + this.id.toString() + ' nome: ' + this.name);
@@ -57,6 +58,9 @@ export class MenuComponent {
     else {
       this.selectedClass = this.classGreenName;      
     }
+  }
 
+  changeCondition():void {
+    this.condition = !this.condition;
   }
 }

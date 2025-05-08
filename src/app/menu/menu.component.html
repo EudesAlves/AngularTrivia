@@ -45,3 +45,51 @@
 <div class="inline">
     <span [ngClass]="selectedClass == 'green' ? classGreenName : classBlueName" (click)="changeClass()" >{{selectedClass}}</span>
 </div>
+
+<hr>
+<h4>Built in Control Flow</h4>
+<span class="spanItem" (click)="changeCondition()">Alterar Condition</span>
+@if(condition) {
+    <p>Condition true</p>
+} @else {
+    <p>Condition false</p>
+}
+
+<p>For Control Flow</p>
+@for (category of categories; track $index) {
+    <span class="spanItem" (click)="selectCategory(category)">{{$index}} - {{category}} </span>
+}
+
+<p>Switch Control Flow</p>
+@switch (selectedCategory) {
+    @case ('Filme') { <p>Perguntas sobre os principais filmes e atores do cinema.</p> }
+    @case ('Musica') { <p>Perguntas sobre bandas, artistas e letras de musica.</p> }
+    @case ('Geografia') { <p>Perguntas sobre países, bandeiras, cidades e lugares turísticos.</p> }
+    @case ('Jogos Eletrônicos') { <p>Perguntas sobre personagens, história, jogadores e criadores do mundo dos jogos.</p> }
+    @case ('Cultura Geek') { <p>Perguntas sobre séries de tv, animações, quadrinhos e demais artes do mundo geek.</p> }
+    @default { <p>Selecione uma Categoria</p> }
+}
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
